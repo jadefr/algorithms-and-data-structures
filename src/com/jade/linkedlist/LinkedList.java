@@ -59,7 +59,6 @@ public class LinkedList {
         return count;
     }
 
-
     public boolean isLinkedListPalindrome() {
         int size = getSize();
         ArrayList<Integer> dataList = new ArrayList<>();
@@ -81,4 +80,16 @@ public class LinkedList {
         System.out.println("Linked list is a palindrome");
         return true;
     }
+
+    public Node reverse() {
+        Node previous = null;
+        Node current = head;
+        while (current != null) {
+            Node tmp = current.next;
+            previous = current;
+            current = tmp;
+        }
+        return previous;
+    }
+
 }

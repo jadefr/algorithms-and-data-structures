@@ -1,6 +1,8 @@
 package com.jade;
 
 import com.jade.linkedlist.LinkedList;
+import com.jade.linkedlist.Node;
+import com.jade.sorting.Sort;
 import strings.StringManipulation;
 
 
@@ -27,14 +29,21 @@ public class Main {
         linkedList.insert(10);
         linkedList.insert(15);
         linkedList.insert(20);
-        linkedList.insert(19);
-        linkedList.insert(10);
-        linkedList.insert(5);
+        linkedList.insert(25);
+        linkedList.insert(30);
+        linkedList.insert(35);
         linkedList.peek();
         linkedList.print();
         linkedList.delete(22);
         linkedList.print();
         linkedList.getSize();
         linkedList.isLinkedListPalindrome();
+        Node reverse = linkedList.reverse();
+        System.out.println("reverse head: " + reverse.data);
+        linkedList.print();
+
+        Sort sorting = new Sort();
+        int[] arr = {3, 6, 2, 7};
+        sorting.bubbleSort(arr);
     }
 }
