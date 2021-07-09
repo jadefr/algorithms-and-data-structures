@@ -44,6 +44,8 @@ public class Main {
 
         Sort sorting = new Sort();
         int[] arr = {3, 6, 2, 7};
-        sorting.bubbleSort(arr);
+//        sorting.bubbleSort(arr);
+        System.out.println();
+        sorting.mergeSort(arr);
     }
 }
