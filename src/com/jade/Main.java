@@ -43,9 +43,10 @@ public class Main {
         linkedList.print();
 
         Sort sorting = new Sort();
-        int[] arr = {3, 6, 2, 7};
+        int[] arr = {3, 6, 2, 7, 11, 1, 5, 4};
 //        sorting.bubbleSort(arr);
         System.out.println();
-        sorting.mergeSort(arr);
+//        sorting.mergeSort(arr);
+        sorting.quickSort(arr, 0, arr.length - 1);
     }
 }

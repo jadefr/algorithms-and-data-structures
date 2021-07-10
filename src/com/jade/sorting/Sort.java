@@ -18,7 +18,7 @@ public class Sort {
             }
         }
         System.out.println("");
-        for (int a: arr) {
+        for (int a : arr) {
             System.out.print(a + " ");
         }
 //        Arrays.stream(arr)
@@ -33,7 +33,7 @@ public class Sort {
             return;
         }
 
-        int middle = length/2;
+        int middle = length / 2;
         int[] left = new int[middle];
         int[] right = new int[length - middle];
 
@@ -87,6 +87,32 @@ public class Sort {
 //        for(int a: arr) {
 //            System.out.print(a + " ");
 //        }
+    }
+
+    public void quickSort(int[] arr, int start, int end) {
+        if (start < end) {
+            int index = partition(arr, start, end);
+            quickSort(arr, start, index - 1);
+            quickSort(arr, index + 1, end);
+        }
+    }
+
+    private int partition(int[] arr, int start, int end) {
+        int pivot = arr[end];
+        int i = start - 1;
+        for (int j = start; j < end; j++) {
+            if (arr[j] <= pivot) {
+                i++;
+                int swap = arr[i];
+                arr[i] = arr[j];
+                arr[j] = swap;
+            }
+        }
+        int swap = arr[i + 1];
+        arr[i + 1] = arr[end];
+        arr[end] = swap;
+
+        return i + 1;
     }
 
 }
