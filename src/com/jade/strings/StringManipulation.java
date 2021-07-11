@@ -52,4 +52,15 @@ public class StringManipulation {
         return true;
     }
 
+
+    /**
+     *  returns the ith fibonacci number
+     *  runtime: O(2^n)
+     */
+    public int fibonacci(int i) {
+        if (i < 2) {
+            return 1;
+        }
+        return fibonacci(i - 1) + fibonacci(i - 2);
+    }
 }

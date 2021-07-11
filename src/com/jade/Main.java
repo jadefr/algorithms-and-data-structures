@@ -27,6 +27,8 @@ public class Main {
         boolean isPalindrome = sm.isPalindrome("abba");
         System.out.println("isPalindrome: " + isPalindrome);
 
+        System.out.println("fibonacci: " + sm.fibonacci(100));
+
         System.out.println();
         LinkedList linkedList = new LinkedList();
         linkedList.insert(5);
