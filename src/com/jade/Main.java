@@ -57,5 +57,8 @@ public class Main {
         tree.insert(5);
         tree.insert(12);
         System.out.println("contains: " + tree.contains(tree.root, 11));
+        tree.inOrder();
+        tree.postOrder();
+        tree.preOrder();
     }
 }

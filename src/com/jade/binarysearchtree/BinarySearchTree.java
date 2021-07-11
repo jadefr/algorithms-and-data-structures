@@ -20,6 +20,7 @@ public class BinarySearchTree {
         return parent;
     }
 
+
     public boolean contains(Node parent, int data) {
         parent = search(parent, data);
         return parent != null;
@@ -38,4 +39,47 @@ public class BinarySearchTree {
             return search(parent.right, data);
         }
     }
+
+
+    public void inOrder() {
+        System.out.print("inOrder:: ");
+        inOrder(root);
+    }
+
+    private void inOrder(Node parent) {
+        if (parent != null) {
+            inOrder(parent.left);
+            System.out.print(parent.data + " ");
+            inOrder(parent.right);
+        }
+    }
+
+
+    public void postOrder() {
+        System.out.print("postOrder:: ");
+        postOrder(root);
+    }
+
+    private void postOrder(Node parent) {
+        if (parent != null) {
+            postOrder(parent.left);
+            postOrder(parent.right);
+            System.out.print(parent.data + " ");
+        }
+    }
+
+
+    public void preOrder() {
+        System.out.print("preOrder:: ");
+        preOrder(root);
+    }
+
+    private void preOrder(Node parent) {
+        if (parent != null) {
+            System.out.print(parent.data + " ");
+            preOrder(parent.left);
+            preOrder(parent.right);
+        }
+    }
+
 }
