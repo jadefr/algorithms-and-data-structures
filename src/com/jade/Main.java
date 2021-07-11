@@ -6,6 +6,7 @@ import com.jade.linkedlist.Node;
 import com.jade.linkedliststack.LinkedListStack;
 import com.jade.queue.Queue;
 import com.jade.sorting.Sort;
+import com.jade.stack.Stack;
 import strings.StringManipulation;
 
 
@@ -72,16 +73,25 @@ public class Main {
         queue.dequeue();
         queue.print();
 
-        LinkedListStack stack = new LinkedListStack();
-        stack.push(5);
+        LinkedListStack llstack = new LinkedListStack();
+        llstack.push(5);
+        llstack.push(10);
+        llstack.push(15);
+        llstack.print();
+        llstack.pop();
+        llstack.pop();
+        llstack.pop();
+        llstack.pop();
+        llstack.peek();
+        llstack.print();
+
+        Stack stack = new Stack(3);
         stack.push(10);
-        stack.push(15);
-        stack.print();
-        stack.pop();
-        stack.pop();
-        stack.pop();
-        stack.pop();
+        stack.push(20);
+        stack.push(30);
         stack.peek();
         stack.print();
+        stack.pop();
+        stack.peek();
     }
 }
