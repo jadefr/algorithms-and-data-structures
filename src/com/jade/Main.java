@@ -3,6 +3,7 @@ package com.jade;
 import com.jade.binarysearchtree.BinarySearchTree;
 import com.jade.linkedlist.LinkedList;
 import com.jade.linkedlist.Node;
+import com.jade.queue.Queue;
 import com.jade.sorting.Sort;
 import strings.StringManipulation;
 
@@ -60,5 +61,14 @@ public class Main {
         tree.inOrder();
         tree.postOrder();
         tree.preOrder();
+
+        Queue queue = new Queue();
+        queue.enqueue(5);
+        queue.enqueue(10);
+        queue.enqueue(15);
+        queue.enqueue(20);
+        queue.print();
+        queue.dequeue();
+        queue.print();
     }
 }
