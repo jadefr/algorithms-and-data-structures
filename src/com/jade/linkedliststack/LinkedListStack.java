@@ -15,7 +15,7 @@ public class LinkedListStack {
 
     public void pop() {
         if (top == null) {
-            System.out.println("Stack Underflow");
+            throw new IllegalArgumentException("Stack Underflow");
         } else {
             top = top.next;
         }
@@ -33,7 +33,7 @@ public class LinkedListStack {
 
     public void peek() {
         if (top == null) {
-            System.out.println("Stack Underflow");
+            throw new IllegalArgumentException("Stack Underflow");
         } else {
             System.out.println("stack peek: " + top.data);
         }

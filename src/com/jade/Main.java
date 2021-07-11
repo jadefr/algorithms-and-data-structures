@@ -1,6 +1,7 @@
 package com.jade;
 
 import com.jade.binarysearchtree.BinarySearchTree;
+import com.jade.dynamicprogramming.Fibonacci;
 import com.jade.linkedlist.LinkedList;
 import com.jade.linkedlist.Node;
 import com.jade.linkedliststack.LinkedListStack;
@@ -27,7 +28,7 @@ public class Main {
         boolean isPalindrome = sm.isPalindrome("abba");
         System.out.println("isPalindrome: " + isPalindrome);
 
-        System.out.println("fibonacci: " + sm.fibonacci(100));
+        System.out.println("fibonacci: " + sm.fibonacci(20));
 
         System.out.println();
         LinkedList linkedList = new LinkedList();
@@ -82,8 +83,6 @@ public class Main {
         llstack.print();
         llstack.pop();
         llstack.pop();
-        llstack.pop();
-        llstack.pop();
         llstack.peek();
         llstack.print();
 
@@ -95,5 +94,8 @@ public class Main {
         stack.print();
         stack.pop();
         stack.peek();
+
+        Fibonacci fib = new Fibonacci();
+        System.out.println("get fib: " + fib.getFib(20));
     }
 }
