@@ -1,5 +1,6 @@
 package com.jade;
 
+import com.jade.binarysearchtree.BinarySearchTree;
 import com.jade.linkedlist.LinkedList;
 import com.jade.linkedlist.Node;
 import com.jade.sorting.Sort;
@@ -48,5 +49,13 @@ public class Main {
         System.out.println();
 //        sorting.mergeSort(arr);
         sorting.quickSort(arr, 0, arr.length - 1);
+
+        BinarySearchTree tree = new BinarySearchTree();
+        tree.insert(10);
+        tree.insert(15);
+        tree.insert(7);
+        tree.insert(5);
+        tree.insert(12);
+        System.out.println("contains: " + tree.contains(tree.root, 11));
     }
 }
