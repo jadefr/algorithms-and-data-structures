@@ -62,10 +62,13 @@ public class Main {
         tree.insert(7);
         tree.insert(5);
         tree.insert(12);
+        tree.insert(17);
         System.out.println("contains: " + tree.contains(tree.root, 11));
         tree.inOrder();
         tree.postOrder();
         tree.preOrder();
+        tree.levelOrder();
+        tree.preOrderIterative();
 
         Queue queue = new Queue();
         queue.enqueue(5);

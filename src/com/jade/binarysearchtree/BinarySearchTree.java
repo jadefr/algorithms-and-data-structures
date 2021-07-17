@@ -1,5 +1,9 @@
 package com.jade.binarysearchtree;
 
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
+
 public class BinarySearchTree {
     public Node root;
 
@@ -82,4 +86,42 @@ public class BinarySearchTree {
         }
     }
 
+    /**
+     * Breadth First Search
+     */
+    public void levelOrder() {
+        System.out.println();
+        System.out.print("  levelOrder:: ");
+        Queue<Node> queue = new LinkedList<Node>();
+        queue.add(root);
+        while (!queue.isEmpty()) {
+            Node firstOfQueue = queue.poll(); // returns and removes the first node of the queue
+            System.out.print(" " + firstOfQueue.data);
+            if (firstOfQueue.left != null) {
+                queue.add(firstOfQueue.left);
+            }
+            if (firstOfQueue.right != null) {
+                queue.add(firstOfQueue.right);
+            }
+        }
+    }
+
+    /**
+     * Depth First Search Without Recursion
+     */
+    public void preOrderIterative() {
+        System.out.print("  depth first search with stack::  ");
+        Stack<Node> stack = new Stack<>();
+        stack.push(root);
+        while (!stack.isEmpty()) {
+            Node current = stack.pop();
+            System.out.print(" " + current.data);
+            if (current.right != null) {
+                stack.push(current.right);
+            }
+            if (current.left != null) {
+                stack.push(current.left);
+            }
+        }
+    }
 }
