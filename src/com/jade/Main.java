@@ -8,6 +8,7 @@ import com.jade.linkedliststack.LinkedListStack;
 import com.jade.queue.Queue;
 import com.jade.sorting.Sort;
 import com.jade.stack.Stack;
+import com.jade.stringsandarrays.ArrayManipulation;
 import strings.StringManipulation;
 
 
@@ -100,5 +101,13 @@ public class Main {
 
         Fibonacci fib = new Fibonacci();
         System.out.println("get fib: " + fib.getFib(20));
+
+        System.out.println();
+        ArrayManipulation arrayManipulation = new ArrayManipulation();
+        int[][] matrix = { { 1, 2, 3 }, { 4, 5, 6 }, {7, 8, 9}};
+        System.out.println("length: " + matrix.length);
+        System.out.println("width: " + matrix[0].length);
+
+        arrayManipulation.printSpiral(matrix, 3, 3);
     }
 }
